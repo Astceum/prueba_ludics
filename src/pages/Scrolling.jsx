@@ -82,7 +82,7 @@ function Scrolling() {
     ScrollTrigger.create({
         animation: tl3,
         trigger: ".contenedor__Animacion_3",
-        start: "+=28%",
+        start: "+=23%",
         end: "+=5 ",
         pin: true, 
         
