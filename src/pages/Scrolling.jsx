@@ -47,11 +47,11 @@ function Scrolling() {
         animation: tl,
         trigger: ".contenedor__Animacion",
         start: "top top",
-        end: "+=70",
+        end: "+=10%",
         pin: true,
         pinSpacing: false,
         
-        /* markers: true, */
+        markers: true,
         scrub: 1,
 
         
@@ -65,12 +65,12 @@ function Scrolling() {
     ScrollTrigger.create({
         animation: tl2,
         trigger: ".contenedor__Animacion_2",
-        start: "+=12%",
-        end: "+=70",
+        start: "+=15%",
+        end: "+=8%",
         pin: true, 
         pinSpacing: false,
         
-        /* markers: true, */
+        markers: true,
         scrub: 1,
     })
 
@@ -82,11 +82,11 @@ function Scrolling() {
     ScrollTrigger.create({
         animation: tl3,
         trigger: ".contenedor__Animacion_3",
-        start: "+=25%",
-        end: "+=3000 ",
+        start: "+=30%",
+        end: "+=5 ",
         pin: true, 
         
-        /* markers: true, */
+        markers: true,
         scrub: 1,
     })
 
@@ -136,7 +136,7 @@ function Scrolling() {
             </main>
         </div>
             <footer>
-                <div className="inicio w-full h-[40vh] bg-blue-700 flex justify-center items-center">   
+                <div className="inicio w-full h-[45vh] bg-blue-700 flex justify-center items-center">   
                     <h1>final</h1>
                 </div>
             </footer>
