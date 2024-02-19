@@ -47,11 +47,11 @@ function Scrolling() {
         animation: tl,
         trigger: ".contenedor__Animacion",
         start: "top top",
-        end: "+=10%",
+        end: "+=2%",
         pin: true,
         pinSpacing: false,
         
-        /* markers: true, */
+        markers: true,
         scrub: 1,
 
         
@@ -65,12 +65,12 @@ function Scrolling() {
     ScrollTrigger.create({
         animation: tl2,
         trigger: ".contenedor__Animacion_2",
-        start: "+=14%",
-        end: "+=7%",
+        start: "+=13%",
+        end: "+=2%",
         pin: true, 
         pinSpacing: false,
         
-        /* markers: true, */
+        markers: true,
         scrub: 1,
     })
 
@@ -86,7 +86,7 @@ function Scrolling() {
         end: "+=5 ",
         pin: true, 
         
-        /* markers: true, */
+        markers: true,
         scrub: 1,
     })
 
@@ -108,7 +108,7 @@ function Scrolling() {
                     <section className="seccion seccio_1_1 w-[50%] h-screen  flex justify-center items-center bg-orange-600">
                         <h2 className="text-white">SECCION 1</h2>
                     </section>
-                    <section className="seccion seccio_2 w-[50%] h-screen  flex justify-center items-center bg-red-600">
+                    <section className="seccion seccio_2 w-[50%] h-screen  flex justify-center items-center bg-lime-500">
                         <h2 className=" text-black">SECCION 2</h2>
                     </section>
                 </div>
