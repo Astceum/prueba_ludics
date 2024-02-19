@@ -66,7 +66,7 @@ function Scrolling() {
         animation: tl2,
         trigger: ".contenedor__Animacion_2",
         start: "+=15%",
-        end: "+=8%",
+        end: "+=8.2%",
         pin: true, 
         pinSpacing: false,
         
