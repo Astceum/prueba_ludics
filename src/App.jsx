@@ -7,6 +7,8 @@ import PinningComponent from './pages/Prueba.jsx'
 
 import Scrolling from './pages/Scrolling.jsx'
 
+import Srolling_pueba from './pages/Srolling_pueba.jsx'
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
       {/* <Navbar/> */}
       <Routes>
         <Route path="/" element={<Scrolling />} />
+        {/* <Route path="/" element={<Srolling_pueba />} /> */}
       </Routes>
     </BrowserRouter>
 

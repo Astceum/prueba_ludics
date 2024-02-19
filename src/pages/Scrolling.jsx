@@ -22,7 +22,7 @@ function Scrolling() {
 
    
     
-    gsap.defaults({ ease: "expo.inOut", duration: 1.5})
+    gsap.defaults({ ease: "expo.inOut", duration: 2})
 
     /* gsap.set(".contenedor__Animacion", {position: "fixed"}) */
 
@@ -30,7 +30,7 @@ function Scrolling() {
 
     useGSAP(() => {
         tl.from(".seccio_2", { yPercent : -100,})
-        tl.from(".seccio_1_1", { yPercent : 100 }, "-=1.5")
+        tl.from(".seccio_1_1", { yPercent : 100 }, "-=2")
     }, {scope: container_y_y})
 
 /*     useGSAP(() => {
@@ -49,7 +49,8 @@ function Scrolling() {
         start: "top top",
         end: "+=70",
         pin: true,
-
+        pinSpacing: false,
+        
         markers: true,
         scrub: 1,
 
@@ -58,32 +59,33 @@ function Scrolling() {
 
     useGSAP(() => {
         tl2.from(".seccio_3", { xPercent : -100 })
-        tl2.from(".seccio_4", { xPercent : 100 }, "-=1.5")
+        tl2.from(".seccio_4", { xPercent : 100 }, "-=2")
     }, {scope: container_x})
 
     ScrollTrigger.create({
         animation: tl2,
         trigger: ".contenedor__Animacion_2",
-        start: "+=10%",
+        start: "+=12%",
         end: "+=70",
         pin: true, 
-
+        pinSpacing: false,
+        
         markers: true,
         scrub: 1,
     })
 
     useGSAP(() => {
         tl3.from(".seccio_5", { yPercent : -100 })
-        tl3.from(".seccio_6", { yPercent : 100 }, "-=1.5")
+        tl3.from(".seccio_6", { yPercent : 100 }, "-=2")
     }, {scope: container_y})
 
     ScrollTrigger.create({
         animation: tl3,
         trigger: ".contenedor__Animacion_3",
         start: "+=25%",
-        end: "+=5 ",
+        end: "+=3000 ",
         pin: true, 
-
+        
         markers: true,
         scrub: 1,
     })
@@ -97,12 +99,12 @@ function Scrolling() {
 
            
        
-        <div className=' w-full h-screen relative '>
-            <main className="contenedor__Animacion w-full h-screen fixed overflow-hidden snap-y snap-mandatory" >
+        <div className=' w-full h-screen relative'>
+            <main className="contenedor__Animacion w-full h-screen fixed overflow-hidden " >
                 <section className="seccion seccio_1 w-full h-screen absolute flex justify-center items-center bg-black">
                     <h2 className="text-white">SECCION 1</h2>
                 </section>
-                <div ref={container_y_y} className='w-full h-screen absolute flex overflow-hidden snap-start ' >                    
+                <div ref={container_y_y} className='w-full h-screen  flex   ' >                    
                     <section className="seccion seccio_1_1 w-[50%] h-screen  flex justify-center items-center bg-orange-600">
                         <h2 className="text-white">SECCION 1</h2>
                     </section>
@@ -112,8 +114,8 @@ function Scrolling() {
                 </div>
 
             </main>
-            <main className="contenedor__Animacion_2 w-full h-screen fixed overflow-hidden snap-y snap-mandatory">                
-                <div ref={container_x} className='w-full h-screen absolute flex overflow-hidden snap-start'>
+            <main className="contenedor__Animacion_2 w-full h-screen fixed overflow-hidden ">                
+                <div ref={container_x} className='w-full h-screen absolute flex overflow-hidden '>
                     <section className="seccion seccio_3 w-[50%] h-screen  flex justify-center items-center bg-violet-800">
                         <h2 className="">SECCION 3</h2>
                     </section>
@@ -122,8 +124,8 @@ function Scrolling() {
                     </section>
                 </div>
             </main>
-            <main className="contenedor__Animacion_3 w-full h-screen fixed overflow-hidden snap-y snap-mandatory">               
-                <div ref={container_y} className='w-full h-screen absolute flex overflow-hidden snap-start'>
+            <main className="contenedor__Animacion_3 w-full h-screen fixed overflow-hidden ">               
+                <div ref={container_y} className='w-full h-screen absolute flex overflow-hidden '>
                     <section className="seccion seccio_5 w-[50%] h-screen  flex justify-center items-center bg-pink-400">
                         <h2 className="">SECCION 5</h2>
                     </section>
@@ -134,7 +136,7 @@ function Scrolling() {
             </main>
         </div>
             <footer>
-                <div className="inicio w-full h-[50vh] bg-blue-700 flex justify-center items-center">   
+                <div className="inicio w-full h-[40vh] bg-blue-700 flex justify-center items-center">   
                     <h1>final</h1>
                 </div>
             </footer>
