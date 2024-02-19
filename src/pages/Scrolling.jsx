@@ -51,7 +51,7 @@ function Scrolling() {
         pin: true,
         pinSpacing: false,
         
-        markers: true,
+        /* markers: true, */
         scrub: 1,
 
         
@@ -70,7 +70,7 @@ function Scrolling() {
         pin: true, 
         pinSpacing: false,
         
-        markers: true,
+        /* markers: true, */
         scrub: 1,
     })
 
@@ -86,7 +86,7 @@ function Scrolling() {
         end: "+=3000 ",
         pin: true, 
         
-        markers: true,
+        /* markers: true, */
         scrub: 1,
     })
 
