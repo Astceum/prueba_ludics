@@ -1,32 +1,29 @@
-import React, { useEffect, useRef } from 'react';
-import { ScrollTrigger, gsap } from 'gsap/all'; // Importa ScrollTrigger y gsap
 
-const PinningComponent = () => {
-  const pinningRef = useRef(null);
 
-  useEffect(() => {
-    // Registra ScrollTrigger para que funcione con gsap
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Aplica el efecto de "pinning"
-    ScrollTrigger.create({
-      trigger: pinningRef.current,
-      start: "top top",
-      end: "bottom bottom",
-      pin: true,
-      markers: true // Opcional: muestra marcadores para visualizar el pinning
-    });
-
-  }, []);
-
+function Prueba() {
   return (
-    <div className="pinning-container h-[110vh] bg-slate-500" ref={pinningRef}>
-      {/* Contenido que será pinneado */}
-      <div className="pinning-content">
-        Este contenido será pinneado mientras se desplaza.
+    <>
+      
+      <div className=' snap-y snap-mandatory overflow h-screen'>
+          <section className="h-screen flex justify-center items-center bg-red-500 snap-start">
+              <h1>Seccion 1</h1>
+          </section>
+          <section className="h-screen flex justify-center items-center bg-orange-900 snap-start">
+              <h1>Seccion 2</h1>
+          </section>
+          <section className="h-screen flex justify-center items-center bg-lime-500 snap-start">
+              <h1>Seccion 3</h1>
+          </section>
+          <section className="h-screen flex justify-center items-center bg-indigo-800 snap-start">
+              <h1>Seccion 4</h1>
+          </section>
+          
+            
+          
       </div>
-    </div>
-  );
-};
+      
+    </>
+  )
+}
 
-export default PinningComponent;
+export default Prueba

@@ -19,15 +19,15 @@ function Srolling_pueba() {
         const handleScroll = () => {
             const scrollPosition = window.scrollY + window.innerHeight;
             const targetPositionPrimeraAnimacion = document.getElementById('primeraAnimacion').offsetTop;
-            /* const targetPositionSegundaAnimacion = document.getElementById('segundaAnimacion').offsetTop; */
+            const targetPositionSegundaAnimacion = document.getElementById('segundaAnimacion').offsetTop;
       
             if (!mostrarPrimeraAnimacion && scrollPosition > targetPositionPrimeraAnimacion) {
                 setMostrarPrimeraAnimacion(true);
               }
         
-              /* if (mostrarPrimeraAnimacion && !mostrarSegundaAnimacion && scrollPosition > targetPositionSegundaAnimacion) {
+              if (mostrarPrimeraAnimacion && !mostrarSegundaAnimacion && scrollPosition > targetPositionSegundaAnimacion) {
                 setMostrarSegundaAnimacion(true);
-              } */
+              }
             };
       
             window.addEventListener('scroll', handleScroll);
@@ -42,8 +42,8 @@ function Srolling_pueba() {
   return (
     <>
         
-          <div className=''>
-            <div id="primeraAnimacion"  className=" flex justify-center items-center h-screen ">
+          <div className='w-full h-[150vh] relative'>
+            <div id="primeraAnimacion"  className=" fixed flex justify-center items-center h-screen ">
                 {/* Aplica clases condicionales para animar el traslado */}
                 <div className={` flex justify-center items-center w-full h-screen bg-blue-500  ${mostrarPrimeraAnimacion ? 'animate-traslado_Y' : ''}`}>
                     <h1 className="text-black text-2xl">Seccion 1</h1>
@@ -52,14 +52,14 @@ function Srolling_pueba() {
                     <h1 className="text-black text-2xl">Seccion 2</h1>
                 </div>
             </div>
-            <div id="segundaAnimacion" className="flex justify-center items-center h-screen">
+            <div id="segundaAnimacion" className="fixed flex justify-center items-center h-screen w-full">
                 
-                <div className={`flex justify-center items-center w-full h-screen bg-lime-600  ${mostrarSegundaAnimacion ? 'animate-traslado_X' : ''}`}>
+                <div className={` left-full flex justify-center items-center w-1/2 h-screen bg-lime-600  ${mostrarSegundaAnimacion ? 'animate-traslado_X' : ''}`}>
                     <h1 className="text-black text-2xl">Seccion 3</h1>
                 </div>
-                <div className={`flex justify-center items-center w-full h-screen bg-violet-800  ${mostrarSegundaAnimacion ? 'animate-traslado_X_X' : ''}`}>
+                {/* <div className={`  flex justify-center items-center w-1/2 h-screen bg-violet-800  ${mostrarSegundaAnimacion ? 'animate-traslado_X_X' : ''}`}>
                     <h1 className="text-black text-2xl">Seccion 4</h1>
-                </div>
+                </div> */}
             </div>
           </div>
         
